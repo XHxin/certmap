@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.6.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<groupId>com.cvc.certmap</groupId>
+	<artifactId>certmap</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>certmap</name>
+	<description>世界认证地图升级项目（分布式）</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<!--spring boot 依赖-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<!--<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>-->
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- spring-data-jpa 依赖(dao层) -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+
+		<!--支付宝支付sdk-->
+		<!--<dependency>
+			<groupId>ali.sdk.alipay</groupId>
+			<artifactId>alipay-sdk-java</artifactId>
+			<version>3.3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>ali.sdk.alipay</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		&lt;!&ndash;支付宝支付sdk源码相关的包，开发过程中作了解用&ndash;&gt;
+		<dependency>
+			<groupId>ali.sdk.alipay</groupId>
+			<artifactId>alipay-sdk-java-source</artifactId>
+			<version>3.3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>ali.sdk.alipay</groupId>
+			<artifactId>commons-logging-sources</artifactId>
+			<version>1.1.1</version>
+		</dependency>-->
+		<dependency>
+			<groupId>com.alipay.sdk</groupId>
+			<artifactId>alipay-sdk-java</artifactId>
+			<version>3.4.49.ALL</version>
+		</dependency>
+
+		<!--自动添加get set 以及空参constructor-->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>RELEASE</version>
+		</dependency>
+	</dependencies>
+
+
+	<!--打包-->
+	<build>
+		<finalName>certmap</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<fork>true</fork>
+
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>
