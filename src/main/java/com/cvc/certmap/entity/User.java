@@ -4,6 +4,7 @@ package com.cvc.certmap.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
@@ -24,6 +25,7 @@ public class User {
     private String headImg;
     private String accessToken;
     private String qqOpenId;
+    private BigDecimal balance;
     private Integer status;
     @Column(name = "cst_modify")
     private Date cstModify;
@@ -40,6 +42,7 @@ public class User {
         this.role = role;
         this.email = email;
         this.status = status;
+        this.balance = new BigDecimal("0");
     }
 
 }

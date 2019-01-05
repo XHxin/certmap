@@ -27,4 +27,7 @@ public class Constants {
     /**绑定类型*/
     public static final Integer BINDDING_TYPE_WECHAT = 1;
     public static final Integer BINDDING_TYPE_QQ = 0;
+
+    /**支付宝支付回调参数，10000代表支付成功*/
+    public static final String ALIPAY_SUCCESS_CODE = "10000";
 }

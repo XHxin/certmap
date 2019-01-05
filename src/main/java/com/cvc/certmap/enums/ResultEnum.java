@@ -21,8 +21,10 @@ public enum ResultEnum {
     REQUIRED_METHOD_ERROR(402,"请求方法错误"),
     TIME_OUT(408,"请求超时"),
     OPERATION_FAILURE(500,"服务器操作异常"),
-    HANDLE_FAILURE(505,"操作失败")
-    ;
+    HANDLE_FAILURE(505,"操作失败"),
+    ORDER_MISSING(4005, "找不到订单"),
+    BUYER_PAY_AMOUNT_NOT_EQUAL(4006, "订单金额与回调通知金额不一致"),
+    SELLER_ID_NOT_EQUAL(4007, "支付seller_id与回调通知seller_id不一致");
 
     private Integer code;
     private String msg;

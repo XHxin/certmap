@@ -20,6 +20,7 @@ spring:
     time-zone: UTC
 
 aliPay:
+  partner:
   appId:
   privateKey:
   publicKey:

@@ -11,4 +11,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface OrderDao extends JpaRepository<Order, Integer> {
+    Order findByOrderNum(String outTradeNo);
 }
