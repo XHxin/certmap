@@ -3,14 +3,13 @@ package com.cvc.certmap.entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
+@Entity
+@Table(name = "cm_course")
 public class Course {
 
   @Id

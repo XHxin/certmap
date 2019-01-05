@@ -10,6 +10,6 @@ import org.springframework.stereotype.Repository;
  * @todo
  */
 @Repository
-public interface WalletUnitDao extends JpaRepository<WalletUnitDao,Integer> {
+public interface WalletUnitDao extends JpaRepository<WalletUnit,Integer> {
     WalletUnit findByIdAndStatus(Integer goodsId, int usable);
 }
